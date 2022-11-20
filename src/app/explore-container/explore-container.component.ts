@@ -11,7 +11,7 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./explore-container.component.scss'],
 })
 export class ExploreContainerComponent implements OnInit {
-  @Input() name: string;
+  @Input() name = '';
 
   constructor() { }
 
