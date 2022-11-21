@@ -1,6 +1,6 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routing';
@@ -12,9 +12,9 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideRouter(routes),
     importProvidersFrom(
       IonicModule.forRoot(),
-      RouterModule.forRoot(routes),
     )
   ]
 })
